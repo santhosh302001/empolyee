@@ -1,0 +1,58 @@
+<br>
+<table class="list" id="employeeList" border="1">
+    <thead>
+        <tr class="span">
+            <th colspan="6">EMPOLYEE INFORMATION</th>
+            <th colspan="6">STANDARD</th>
+            <th colspan="6">CURRENT MONTH</th>
+        </tr>
+        <tr class="text">
+            <th>Id</th>
+            <th>Employee_id</th>
+            <th>Code</th>
+            <th>Full_name</th>
+            <th>Employee_branch__code</th>
+            <th>Employee_branch__name</th>
+            <th>Doj</th>
+            <th>Month</th>
+            <th>Amount</th>
+            <th>Bonus</th>
+            <th>Deduction_amount</th>
+            <th>Headings</th>
+            <th>Paid_days</th>
+            <th>Payable_days</th>
+            <th>Payroll_date</th>
+            <th>From_date</th>
+            <th>To_date</th>
+            <th>Year</th>
+
+
+
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let data of list" class="font" >
+             
+            <td>{{data.id}}</td> 
+            <td>{{data.employee_id}}</td> 
+            <td>{{data.code}}</td> 
+            <td>{{data.full_name}}</td> 
+            <td>{{data.employee_branch__code}}</td>  
+            <td>{{data.employee_branch__name}}</td> 
+            <td>{{data.doj | date:'dd-MM-yyyy' }}</td> 
+            <td>{{data.month | date: 'dd-MM-yyyy'}}</td>
+            <td>{{data.amount}}</td> 
+            <td>{{data.bonus}}</td> 
+            <td>{{data.deduction_amount }}</td>
+            <td>{{data.headings}}</td> 
+            <td>{{data.paid_days }}</td> 
+            <td>{{data.payable_days }}</td> 
+            <td>{{data.payroll_date | date: 'dd-MM-yyyy'}}</td> 
+            <td>{{data.from_date | date: 'dd-MM-yyyy' }}</td>
+            <td>{{data.to_date | date: 'dd-MM-yyyy'}}</td> 
+            <td>{{data.year | date: 'dd-MM-yyyy'}}</td>    
+        </tr>
+        
+
+    </tbody>
+</table>
